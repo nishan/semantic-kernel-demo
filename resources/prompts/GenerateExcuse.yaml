@@ -1,0 +1,24 @@
+name: Excuse
+template: |
+  Generate a funny and creative excuse to send to your boss for a given event. 
+
+  The excuse should be {{$length}} sentences long.   
+
+  Let your imagtination run wild and create a humorous story that will make your boss laugh.  
+
+  Event: {{$event}}
+
+template_format: semantic-kernel
+description: A function that generates an excuse about an event
+input_variables:
+  - name: event
+    description: Turn a scenario into a creative or humorous excuse to send to your boss.
+    is_required: true
+  - name: length
+    description: The number of sentences in the excuse.
+    is_required: true
+output_variable:
+  description: The generated excuse.
+execution_settings:
+  default:
+    temperature: 0.8
